@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuferSincronizado.cs" />
+    <Compile Include="BuferSinSincronizacion.cs" />
+    <Compile Include="Consumidor.cs" />
     <Compile Include="IBufer.cs" />
     <Compile Include="Productor.cs" />
     <Compile Include="Program.cs" />
