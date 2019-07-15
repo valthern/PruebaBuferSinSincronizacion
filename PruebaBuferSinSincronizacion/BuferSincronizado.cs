@@ -64,7 +64,7 @@ namespace PruebaBuferSinSincronizacion
             {
                 // Adquiere el bloqueo para este objeto
                 Monitor.Enter(this);
-
+                             
                 // Si no hay ubicaciones vacías coloca el subproceso
                 // invocador en el estado WaitSleepJoin
                 if (cuentaBuferOcupado == 1)

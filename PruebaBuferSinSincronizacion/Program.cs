@@ -14,10 +14,15 @@ namespace PruebaBuferSinSincronizacion
         static void Main(string[] args)
         {
             // Crea objeto compartido utilizado por lo subprocesos
-            BuferSinSincronizacion compartido = new BuferSinSincronizacion();
+            //BuferSinSincronizacion compartido = new BuferSinSincronizacion();
+            BuferSincronizado compartido = new BuferSincronizado();
 
             // Objeto aleatorio usado por cada proceso
             Random aleatorio = new Random();
+
+            // Imprime los encabezados de las columnas y el estado inicial del búfer
+            Console.WriteLine($"{"Operación",-35}{"Búfer",-9}{"Cuenta ocupado"}\n");
+            compartido.MostrarEstado("Estado inicial");
 
             // Crea objetos Productor y Consumidor
             Productor productor = new Productor(compartido, aleatorio);
